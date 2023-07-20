@@ -10,10 +10,12 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <form action="/items" method="post">
-      <label for="description">Add a new item</label>
-      <input id="description" name="description" type="text">
-      <button type="submit">Submit</button>
-    </form>
+    <h1>To Do List Item Details: </h1>
+
+    <h2>@Model["item"].Description</h2>
+    <h3>Category: @Model["category"].Name</h3>
+
+    <a href='/categories/@Model["category"].Id/items/new'>Add another item</a>
+    <a href='/categories'>View all categories</a>
   </body>
 </html>
